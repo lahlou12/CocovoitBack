@@ -5,7 +5,7 @@ var userSchema = new Schema (
     {
         prenom : {type : String, require : true},
         nom : {type : String, require : true},
-        dateNaissance :  {type : date, require : true},
+        dateNaissance :  {type : String, require : true},
         mail : {type : String, require : true},
         motDePasse : {type : String, require : true},
         modelVoiture : {type : String, require : true},
