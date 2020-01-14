@@ -15,10 +15,10 @@ app.use(bodyParser.json());
 app.use('/users', routeUsers);
 
 // route itineraires
-//app.use('/itineraires', routeItineraires),
+app.use('/itineraires', routeItineraires),
 
 // route avis
-//app.use('/avis', routeAvis);
+app.use('/avis', routeAvis);
 
 //Connexion à la base de données.
 dataBase.connection();

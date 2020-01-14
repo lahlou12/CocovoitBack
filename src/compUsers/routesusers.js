@@ -12,7 +12,7 @@ router.get('/:id', actionUsers.avoirUserAction);
 router.delete('/:id', actionUsers.supprimerUserAction);
 
 // authentifier un user
-router.get('/:mail/:motdepasse', actionUsers.authentificationUserAction);
+router.post('/login', actionUsers.authentificationUserAction);
 
 // mettre a jour les informations d'un user
 //router.put('/', "");

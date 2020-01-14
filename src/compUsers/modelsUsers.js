@@ -8,12 +8,13 @@ var userSchema = new Schema (
         dateNaissance :  {type : String, require : true},
         mail : {type : String, require : true},
         motDePasse : {type : String, require : true},
-        modelVoiture : {type : String, require : true},
-        matricule : {type : String, require : true},
-        biographie : {type : String, require: true},
-        nbEtoile : {type : Number},
-        nbTrajet : {type : Number},
-        idTrajet : [],
+        modelVoiture : {type : String},
+        matricule : {type : String},
+        //biographie : {type : String, require: true},
+        nbEtoile : {type : Number, default : 0},
+        idTrajetConducteur : [],
+        idTrajetPassager : [],
+        idTrajetNote : [],
         idAvis : []
     }
 );
