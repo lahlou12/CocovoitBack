@@ -7,6 +7,9 @@ const routeUsers = require('./src/compUsers/routesUsers');
 const routeItineraires = require('./src/comipItineraires/routesItineraires');
 const routeAvis = require('./src/compAvis/routesAvis');
 
+var cors = require('cors')
+app.use(cors())
+
 // body parser 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
