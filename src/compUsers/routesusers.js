@@ -15,6 +15,6 @@ router.delete('/:id', actionUsers.supprimerUserAction);
 router.post('/login', actionUsers.authentificationUserAction);
 
 // mettre a jour les informations d'un user
-//router.put('/', "");
+router.put('/', actionUsers.modifierUserAction);
 
 module.exports = router;

@@ -69,7 +69,7 @@ module.exports = {
             colUsers.findOne({mail : mail}, (err, user) =>{
                 if (!user) reject("Le User est introuvable dans la base de données");
                 if (err) reject("Erreur");
-
+                if(user){
                 var motDePasseValide= bcrypt.compareSync(motDePasse,user.motDePasse);
                 if (!motDePasseValide) reject("Mot de passe invalide");
                 else {
@@ -80,8 +80,9 @@ module.exports = {
                         "secret",{
                         expiresIn: "1h"
                     })
-                    resolve({message : "connexion reussie", token : token});
+                    resolve({message : "connexion reussie", user_id : user._id,token : token});
                 }
+            }
             })
         })
     },

@@ -87,9 +87,11 @@ module.exports ={
     chercherItinerairesAction : (req, res) =>{
         depart = req.params.depart.toUpperCase();
         arrive = req.params.arrive.toUpperCase();
+        
 
         processItineraires.chercherItinerairesProcess(depart, arrive)
         .then((result) =>{
+            console.log(result);
             res.status(200).json(result);
         })
         .catch((errType)=>{
