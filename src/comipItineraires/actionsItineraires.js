@@ -56,6 +56,9 @@ module.exports ={
         idItineraire = req.params.id;
         idUser = req.body.iduser;
         
+        console.log(idItineraire);
+        console.log(idUser);
+
         processItineraires.candidaterAUnItinerairesProcess(idItineraire, idUser)
         .then((result) =>{
             res.status(200).json(result);
