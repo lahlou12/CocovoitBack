@@ -7,7 +7,6 @@ module.exports = {
     ajouterUserAction : (req, res) => {
         console.log(req.body)
         //console.log(JSON.stringify(req))
-        console.log(req.body.name)
 
         const pwd = bcrypt.hashSync(req.body.motDePasse, 8);
         
@@ -55,6 +54,8 @@ module.exports = {
 
     modifierUserAction : (req, res) =>{
         idUser = req.params.id;
+
+        console.log(req.body.nom);
         
         var myUser = new colUsers({
             prenom : req.body.prenom,
@@ -69,6 +70,7 @@ module.exports = {
 
         processUsers.modifierUserProcess(myUser, idUser)
         .then((result) => {
+            console.log(result)
             res.status(200).json(result);
         })
         .catch((err) => {

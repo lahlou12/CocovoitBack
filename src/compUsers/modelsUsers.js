@@ -10,7 +10,7 @@ var userSchema = new Schema (
         motDePasse : {type : String, require : true},
         modelVoiture : {type : String},
         matricule : {type : String},
-        //biographie : {type : String, require: true},
+        biographie : {type : String, require: true},
         nbEtoile : {type : Number, default : 0},
         idTrajetConducteur : [],
         idTrajetPassager : [],

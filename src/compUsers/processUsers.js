@@ -48,7 +48,7 @@ module.exports = {
                 if (err) reject("Erreur");
                 else{
                     user.prenom = myUser.prenom;
-                    user.nom = myUser.note;
+                    user.nom = myUser.nom;
                     user.dateNaissance = myUser.dateNaissance;
                     user.motDePasse = myUser.motDePasse;
                     user.modelVoiture = myUser.modelVoiture;
