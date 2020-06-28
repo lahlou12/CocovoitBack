@@ -4,7 +4,7 @@ const cocovoitMail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'cocovoitevry@gmail.com',
-        pass: 'LahlouAmine12'
+        pass: '*******'
     }
 });
 
